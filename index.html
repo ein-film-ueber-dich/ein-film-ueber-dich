@@ -76,16 +76,23 @@
     }
 
     .hero {
-      min-height: 630px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      background:
-        radial-gradient(ellipse at 50% 25%,
-          rgba(154, 112, 58, 0.28), transparent 55%),
-        linear-gradient(160deg, #373025 0%, #1c1c17 55%, #12120f 100%);
-      border-bottom: 1px solid var(--line);
-      padding: 90px 0;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      rgba(15, 15, 13, 0.30),
+      rgba(15, 15, 13, 0.48)
+    ),
+    url("./Ein%20Film%20u%CC%88ber%20dich.png")
+      center center / cover no-repeat;
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0;
     }
 
     .eyebrow {

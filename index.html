@@ -1,1 +1,551 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Ein Film über dich – Deine Geschichte bleibt</title>
+
+  <meta name="description" content="Ein persönlicher Film über dich, deine Familie und dein Lebenswerk. Bewahre deine Geschichte für die Menschen, die dir wichtig sind.">
+
+  <meta name="theme-color" content="#171713">
+
+  <style>
+    :root {
+      --bg: #171713;
+      --bg-soft: #22221c;
+      --gold: #d8b477;
+      --text: #f6f1e8;
+      --muted: #c2bbae;
+      --line: rgba(216, 180, 119, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 1px solid var(--line);
+      background: rgba(23, 23, 19, 0.96);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    .nav a:last-child {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      min-height: 630px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 25%,
+          rgba(154, 112, 58, 0.28), transparent 55%),
+        linear-gradient(160deg, #373025 0%, #1c1c17 55%, #12120f 100%);
+      border-bottom: 1px solid var(--line);
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 22px auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 7vw, 5.6rem);
+      line-height: 1.08;
+      font-weight: 400;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 26px auto;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 650;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #1a1711;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--gold);
+      color: var(--text);
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 42px;
+    }
+
+    .story-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+
+    .story-card .number {
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+    }
+
+    .story-card h3 {
+      font-size: 1.2rem;
+      margin: 12px 0;
+    }
+
+    .story-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .films {
+      background: #202019;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .film-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .film {
+      min-width: 0;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #080808;
+      overflow: hidden;
+    }
+
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .film h3 {
+      margin: 18px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .film p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .about {
+      background:
+        radial-gradient(ellipse at 100% 50%,
+          rgba(154, 112, 58, 0.12), transparent 60%);
+    }
+
+    .about-text {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: #242219;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact .section-intro {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      padding: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .hero {
+        min-height: 560px;
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .story-grid,
+      .film-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-card {
+        padding: 24px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#start">Ein Film über dich</a>
+      <a href="#kontakt">Kontakt aufnehmen →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="start">
+      <div class="container">
+        <div class="eyebrow">Dein Leben. Deine Geschichte.</div>
+
+        <h1>
+          Ein Film über dich.<br>
+          <span>Dein Vermächtnis.</span>
+        </h1>
+
+        <p>
+          Jeder Mensch hat eine einzigartige Geschichte.
+          Halte fest, was dich geprägt hat, was dir wichtig ist
+          und was du den Menschen hinterlassen möchtest,
+          die du liebst.
+        </p>
+
+        <div class="buttons">
+          <a class="button button-primary" href="#kontakt">
+            Über deinen Film sprechen
+          </a>
+
+          <a class="button button-secondary" href="#filme">
+            Filmbeispiele ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="idee">
+      <div class="container">
+        <div class="eyebrow">Was bleibt</div>
+
+        <h2 class="section-title">
+          Deine Geschichte verdient es,<br>
+          <span class="gold">erzählt zu werden.</span>
+        </h2>
+
+        <p class="section-intro">
+          Ein persönlicher Film ist mehr als eine Sammlung
+          von Erinnerungen. Er bewahrt deine Stimme, deine
+          Erfahrungen, deine Werte und die besonderen Momente
+          deines Lebens – für deine Familie und für kommende
+          Generationen.
+        </p>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <div class="number">01</div>
+            <h3>Dein Lebensweg</h3>
+            <p>
+              Die Erlebnisse, Entscheidungen und Begegnungen,
+              die dich zu dem Menschen gemacht haben, der du bist.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="number">02</div>
+            <h3>Deine Menschen</h3>
+            <p>
+              Familie, Freundschaften und gemeinsame Augenblicke,
+              die deinem Leben Bedeutung geben.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="number">03</div>
+            <h3>Deine Botschaft</h3>
+            <p>
+              Gedanken, Werte und Erfahrungen, die du deinen
+              Kindern, Enkeln und anderen Menschen weitergeben möchtest.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="films" id="filme">
+      <div class="container">
+        <div class="eyebrow">Einblicke in meine Arbeit</div>
+
+        <h2 class="section-title">
+          Menschen. Geschichten. <span class="gold">Leben.</span>
+        </h2>
+
+        <p class="section-intro">
+          Jeder Mensch ist anders. Deshalb ist auch jeder Film
+          einzigartig. Hier findest du zwei Beispiele meiner Arbeit.
+        </p>
+
+        <div class="film-grid">
+
+          <article class="film">
+            <div class="video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/Cdy7NUfObV4"
+                title="Christél. Leben bei 50%"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <h3>Christél. Leben bei 50%</h3>
+            <p>
+              Ein persönlicher Einblick in das Leben eines Menschen
+              und in das, was wirklich zählt.
+            </p>
+          </article>
+
+          <article class="film">
+            <div class="video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/OOfyrNzA_Cw"
+                title="HJK. Einiges über Hans-Jürgen Kuhlo"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <h3>HJK. Einiges über Hans-Jürgen Kuhlo</h3>
+            <p>
+              Ein Porträt, das persönliche Erinnerungen und
+              Lebensgeschichte miteinander verbindet.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="ablauf">
+      <div class="container">
+        <div class="eyebrow">Persönlich und individuell</div>
+
+        <h2 class="section-title">
+          Dein Leben steht<br>
+          <span class="gold">im Mittelpunkt.</span>
+        </h2>
+
+        <div class="about-text">
+          <p>
+            Ich bin Andrej Raduga. Mich interessiert, was einen
+            Menschen ausmacht: seine Erfahrungen, seine Gedanken,
+            seine Beziehungen und die Spuren, die er hinterlässt.
+          </p>
+
+          <p>
+            Gemeinsam besprechen wir, welche Geschichte dein Film
+            erzählen soll. Je nach Wunsch können Gespräche,
+            Erinnerungsstücke, Fotografien, besondere Orte,
+            Familienmomente und persönliche Botschaften Teil des
+            Films werden.
+          </p>
+
+          <p>
+            Wir beginnen mit einem unverbindlichen Gespräch von
+            ungefähr 30 Minuten. Dabei klären wir deine Wünsche,
+            den möglichen Umfang, den zeitlichen Rahmen und die Kosten.
+            Alles Weitere wird vor Beginn gemeinsam vereinbart.
+          </p>
+
+          <p>
+            Deine Privatsphäre und deine Wünsche stehen dabei
+            an erster Stelle. Aufnahmen mit anderen Menschen
+            erfolgen nur mit deren Zustimmung.
+          </p>
+        </div>
+
+        <div class="buttons" style="justify-content:flex-start">
+          <a class="button button-primary" href="#kontakt">
+            Lass uns darüber sprechen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="container">
+        <div class="eyebrow">Der erste Schritt</div>
+
+        <h2 class="section-title">
+          Deine Geschichte beginnt<br>
+          <span class="gold">mit einem Gespräch.</span>
+        </h2>
+
+        <p class="section-intro">
+          Du möchtest einen Film über dich, deine Eltern,
+          deine Familie oder einen besonderen Menschen gestalten?
+          Schreib mir. Gemeinsam finden wir heraus, was möglich ist.
+        </p>
+
+        <div class="buttons">
+          <a
+            class="button button-primary"
+            href="https://wa.me/491758269967"
+            target="_blank"
+            rel="noopener noreferrer">
+            Nachricht über WhatsApp
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="mailto:AndreyRaduga@iCloud.com">
+            E-Mail schreiben
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Andrej Raduga · Ein Film über dich</p>
+      <p>Deine Geschichte. Deine Familie. Dein Vermächtnis.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

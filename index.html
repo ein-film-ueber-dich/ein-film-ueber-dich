@@ -104,12 +104,12 @@
 
       background-color: #24231f;
       background-image:
-        linear-gradient(
+  linear-gradient(
     90deg,
     rgba(15, 15, 13, 0.02) 0%,
-    rgba(15, 15, 13, 0.03) 35%,
-    rgba(15, 15, 13, 0.12) 65%,
-    rgba(15, 15, 13, 0.28) 100%
+    rgba(15, 15, 13, 0.02) 45%,
+    rgba(15, 15, 13, 0.08) 75%,
+    rgba(15, 15, 13, 0.18) 100%
   ),
   url("./hero-clean.png");
 
@@ -131,22 +131,23 @@
   isolation: isolate;
   width: min(760px, 72%);
   text-align: left;
-  transform: translate(-7%, 50px);
+  transform: translate(-7%, -10px);
 }
 .hero-text::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: -34px;
-  right: -30px;
-  bottom: -30px;
-  left: -34px;
+  top: -55px;
+  right: -90px;
+  bottom: -55px;
+  left: -90px;
   background: radial-gradient(
     ellipse at center,
-    rgba(15, 15, 13, 0.68) 0%,
-    rgba(15, 15, 13, 0.48) 48%,
-    rgba(15, 15, 13, 0.18) 72%,
-    rgba(15, 15, 13, 0) 100%
+    rgba(15, 15, 13, 0.50) 0%,
+    rgba(15, 15, 13, 0.32) 38%,
+    rgba(15, 15, 13, 0.14) 62%,
+    rgba(15, 15, 13, 0.04) 78%,
+    transparent 100%
   );
   pointer-events: none;
 }

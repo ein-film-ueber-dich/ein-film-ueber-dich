@@ -104,14 +104,7 @@
 
       background-color: #24231f;
       background-image:
-        radial-gradient(
-    ellipse at 48% 42%,
-    rgba(15, 15, 13, 0.48) 0%,
-    rgba(15, 15, 13, 0.34) 35%,
-    rgba(15, 15, 13, 0.12) 62%,
-    transparent 80%
-  ),
-  linear-gradient(
+        linear-gradient(
     90deg,
     rgba(15, 15, 13, 0.02) 0%,
     rgba(15, 15, 13, 0.03) 35%,
@@ -134,10 +127,29 @@
     }
 
     .hero-text {
-      width: min(760px, 72%);
+  position: relative;
+  isolation: isolate;
+  width: min(760px, 72%);
   text-align: left;
   transform: translate(-7%, -30px);
-    }
+}
+.hero-text::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -34px;
+  right: -30px;
+  bottom: -30px;
+  left: -34px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(15, 15, 13, 0.68) 0%,
+    rgba(15, 15, 13, 0.48) 48%,
+    rgba(15, 15, 13, 0.18) 72%,
+    rgba(15, 15, 13, 0) 100%
+  );
+  pointer-events: none;
+}
 
     .eyebrow {
       margin: 0 0 14px;

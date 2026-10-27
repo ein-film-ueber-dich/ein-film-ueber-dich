@@ -104,7 +104,14 @@
 
       background-color: #24231f;
       background-image:
-        linear-gradient(
+        radial-gradient(
+    ellipse at 48% 42%,
+    rgba(15, 15, 13, 0.48) 0%,
+    rgba(15, 15, 13, 0.34) 35%,
+    rgba(15, 15, 13, 0.12) 62%,
+    transparent 80%
+  ),
+  linear-gradient(
     90deg,
     rgba(15, 15, 13, 0.02) 0%,
     rgba(15, 15, 13, 0.03) 35%,
@@ -127,9 +134,9 @@
     }
 
     .hero-text {
-      width: min(720px, 68%);
+      width: min(760px, 72%);
   text-align: left;
-  transform: translateX(-7%);
+  transform: translate(-7%, -30px);
     }
 
     .eyebrow {
@@ -144,11 +151,11 @@
     h1 {
       margin: 0 0 22px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 3.8vw, 3.8rem);
+  font-size: clamp(3rem, 4.8vw, 4.8rem);
   font-weight: 400;
-  line-height: 1.12;
+  line-height: 1.08;
   letter-spacing: -0.025em;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65);
     }
 
     h1 span {

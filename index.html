@@ -105,13 +105,13 @@
       background-color: #24231f;
       background-image:
         linear-gradient(
-          90deg,
-          rgba(15, 15, 13, 0.02) 0%,
-          rgba(15, 15, 13, 0.08) 32%,
-          rgba(15, 15, 13, 0.66) 55%,
-          rgba(15, 15, 13, 0.86) 100%
-        ),
-        url("./hero-clean.png");
+    90deg,
+    rgba(15, 15, 13, 0.02) 0%,
+    rgba(15, 15, 13, 0.03) 35%,
+    rgba(15, 15, 13, 0.12) 65%,
+    rgba(15, 15, 13, 0.28) 100%
+  ),
+  url("./hero-clean.png");
 
       background-size: cover;
       background-position: center center;
@@ -124,13 +124,12 @@
       width: 100%;
   display: flex;
   justify-content: center;
-  padding-left: 10%;
     }
 
     .hero-text {
-      width: min(570px, 52%);
+      width: min(720px, 68%);
   text-align: left;
-  transform: translateX(-8%);
+  transform: translateX(-7%);
     }
 
     .eyebrow {
@@ -144,12 +143,12 @@
 
     h1 {
       margin: 0 0 22px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.7rem, 4.5vw, 4.7rem);
-      font-weight: 400;
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 3.8vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
     }
 
     h1 span {
@@ -261,6 +260,29 @@
 
     /* FILM EXAMPLES */
 
+    /* HELLER HINTERGRUND FÜR FILMBEISPIELE */
+
+#filme {
+  background: #e8dfce;
+  color: #29251e;
+}
+
+#filme .section-heading p {
+  color: #5b554b;
+}
+
+#filme .film-card {
+  background: #f5efe4;
+  border-color: #d4c7b1;
+}
+
+#filme .film-info h3 {
+  color: #29251e;
+}
+
+#filme .film-info p {
+  color: #5b554b;
+}
     .films {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));

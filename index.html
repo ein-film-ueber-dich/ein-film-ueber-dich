@@ -56,8 +56,12 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  background: transparent;
-  border-bottom: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 27, 30, 0.78),
+    rgba(25, 27, 30, 0.38)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
     .nav {
@@ -125,7 +129,7 @@
   position: relative;
   width: min(650px, 55%);
   text-align: left;
-  transform: none;
+  transform: translateY(-45px);
   background: none;
 }
 

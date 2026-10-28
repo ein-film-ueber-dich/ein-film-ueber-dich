@@ -51,11 +51,14 @@
     /* NAVIGATION */
 
     header {
-      position: relative;
-      z-index: 10;
-      background: rgba(23, 23, 20, 0.98);
-      border-bottom: 1px solid var(--line);
-    }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  border-bottom: none;
+}
 
     .nav {
       min-height: 76px;
@@ -94,63 +97,36 @@
     /* HERO / COVER */
 
     .hero {
-      min-height: calc(100svh - 76px);
-      display: flex;
-      align-items: center;
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      padding: 44px 0;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 110px 0 50px;
 
-      background-color: #24231f;
-      background-image:
-  linear-gradient(
-    90deg,
-    rgba(15, 15, 13, 0.02) 0%,
-    rgba(15, 15, 13, 0.02) 45%,
-    rgba(15, 15, 13, 0.08) 75%,
-    rgba(15, 15, 13, 0.18) 100%
-  ),
-  url("./hero-clean.png");
+  background-color: #24231f;
+  background-image: url("./hero-clean.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-
-      border-bottom: 1px solid var(--line);
-    }
+  border-bottom: 1px solid var(--line);
+}
 
     .hero-content {
-      width: 100%;
+  width: min(1360px, calc(100% - 64px));
+  margin-inline: auto;
   display: flex;
-  justify-content: center;
-    }
+  justify-content: flex-start;
+}
 
 .hero-text {
   position: relative;
-  isolation: isolate;
-  width: min(760px, 72%);
+  width: min(650px, 55%);
   text-align: left;
-  transform: translate(-7%, -80px);
+  transform: none;
   background: none;
-}
-.hero-text::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -100px;
-  right: -180px;
-  bottom: -100px;
-  left: -180px;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(15, 15, 13, 0.48) 0%,
-    rgba(15, 15, 13, 0.30) 35%,
-    rgba(15, 15, 13, 0.14) 55%,
-    rgba(15, 15, 13, 0.05) 75%,
-    transparent 100%
-  );
 }
 
     .eyebrow {

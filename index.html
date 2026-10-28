@@ -129,6 +129,32 @@
   background: none;
 }
 
+    .site-signature {
+  position: absolute;
+  left: 5.8%;
+  top: 18px;
+  z-index: 11;
+  color: #fff;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(28px, 3vw, 43px);
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+  white-space: nowrap;
+  transform: rotate(-5deg);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.site-signature::after {
+  content: "";
+  display: block;
+  width: 72%;
+  height: 1px;
+  margin: 5px 0 0 12%;
+  background: #d7ad61;
+  transform: rotate(-3deg);
+}
+    
     .hero-features {
   position: absolute;
   z-index: 3;

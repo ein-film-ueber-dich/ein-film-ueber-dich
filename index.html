@@ -128,15 +128,27 @@
 
 .hero-text {
   position: relative;
+  isolation: isolate;
   width: min(760px, 72%);
   text-align: left;
   transform: translate(-7%, -80px);
+  background: none;
+}
+.hero-text::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  right: -180px;
+  bottom: -100px;
+  left: -180px;
+  pointer-events: none;
   background: radial-gradient(
-    ellipse 100% 100% at 50% 50%,
-    rgba(15, 15, 13, 0.52) 0%,
-    rgba(15, 15, 13, 0.32) 35%,
-    rgba(15, 15, 13, 0.14) 60%,
-    rgba(15, 15, 13, 0.04) 80%,
+    ellipse at center,
+    rgba(15, 15, 13, 0.48) 0%,
+    rgba(15, 15, 13, 0.30) 35%,
+    rgba(15, 15, 13, 0.14) 55%,
+    rgba(15, 15, 13, 0.05) 75%,
     transparent 100%
   );
 }

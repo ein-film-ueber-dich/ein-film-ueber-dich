@@ -160,9 +160,9 @@
     .hero-features {
   position: absolute;
   z-index: 3;
-  left: 5.8%;
-  right: 3%;
-  bottom: 30px;
+  left: 3%;
+right: 1.5%;
+  bottom: -10px;
   width: auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -173,11 +173,15 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 12px;
+  padding: 0 10px;
   min-width: 0;
   color: #fff;
   text-decoration: none;
   border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-feature:last-child {
+  border-right: none;
 }
 
 .hero-feature:last-child {
@@ -200,11 +204,12 @@
 
 .hero-feature p {
   margin: 0;
-  max-width: 100%;
+  width: 100%;
   font-size: 14px;
   line-height: 1.4;
-  overflow-wrap: normal;
+  white-space: normal;
   word-break: normal;
+  overflow-wrap: normal;
 }
     
     .eyebrow {

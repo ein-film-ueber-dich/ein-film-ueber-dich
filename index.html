@@ -133,6 +133,51 @@
   background: none;
 }
 
+    .hero-features {
+  position: absolute;
+  z-index: 3;
+  left: max(32px, calc((100% - 1360px) / 2));
+  bottom: 105px;
+  width: min(1000px, calc(100% - 64px));
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hero-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 18px;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-feature:last-child {
+  border-right: none;
+}
+
+.feature-icon {
+  color: #e5bd72;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.hero-feature h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.hero-feature p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+    
     .eyebrow {
       margin: 0 0 14px;
       color: var(--gold);
@@ -631,6 +676,33 @@
 
 </div>
       </div>
+      <div class="hero-features">
+
+  <a class="hero-feature" href="#ueber-mich">
+    <span class="feature-icon">▧</span>
+    <h3>Deine Geschichte</h3>
+    <p>Ein persönlicher Film<br>über dein Leben.</p>
+  </a>
+
+  <a class="hero-feature" href="#familie">
+    <span class="feature-icon">♧</span>
+    <h3>Deine Familie</h3>
+    <p>Gemeinsame Momente,<br>die bleiben.</p>
+  </a>
+
+  <a class="hero-feature" href="#werte">
+    <span class="feature-icon">♧</span>
+    <h3>Deine Werte</h3>
+    <p>Was dir wichtig ist –<br>für heute und morgen.</p>
+  </a>
+
+  <a class="hero-feature" href="#vermaechtnis">
+    <span class="feature-icon">∞</span>
+    <h3>Dein Vermächtnis</h3>
+    <p>Eine bleibende Erinnerung<br>für kommende Generationen.</p>
+  </a>
+
+</div>
     </section>
 
     <!-- FILMBEISPIELE -->

@@ -1,1 +1,589 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rechtliche Informationen und Vereinbarung zur Erstellung eines persönlichen Films mit Andrej Raduga.">
+  <title>Rechtliches &amp; Vereinbarung | Ein Film über dich</title>
+  <style>
+    :root {
+      --bg: #111411;
+      --panel: #1b201b;
+      --text: #f4f1e9;
+      --muted: #c4c4bb;
+      --gold: #d5b36b;
+      --border: rgba(213, 179, 107, 0.3);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+    a {
+      color: var(--gold);
+    }
+    a:hover {
+      color: #f0d79c;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #151915;
+    }
+    .nav {
+      max-width: 1100px;
+      min-height: 76px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .back-link {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .back-link:hover {
+      color: var(--gold);
+    }
+    main {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 60px 0 80px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: bold;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.25;
+    }
+    h1 {
+      margin: 0 0 20px;
+      color: var(--gold);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+    }
+    h2 {
+      margin: 0 0 22px;
+      color: var(--gold);
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+    }
+    h3 {
+      margin: 30px 0 10px;
+      font-size: 1.25rem;
+    }
+    p {
+      margin: 0 0 18px;
+    }
+    .intro {
+      margin-bottom: 38px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .notice {
+      margin: 28px 0 42px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--gold);
+      background: var(--panel);
+      color: var(--muted);
+    }
+    .agreement {
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .agreement section {
+      margin: 0 0 34px;
+      padding: 0 0 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .agreement section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+    .agreement h2 {
+      font-size: 1.45rem;
+    }
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .field {
+      display: inline-block;
+      min-width: 180px;
+      border-bottom: 1px solid var(--muted);
+    }
+    .downloads {
+      margin-top: 42px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .download-link {
+      display: inline-block;
+      margin: 8px 12px 8px 0;
+      padding: 12px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .download-link:hover {
+      background: var(--gold);
+      color: #171914;
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    footer {
+      padding: 26px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+      main {
+        width: min(100% - 28px, 900px);
+        padding-top: 38px;
+      }
+      .agreement {
+        padding: 22px 18px;
+      }
+      .downloads {
+        padding: 22px 18px;
+      }
+      .download-link {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Seitennavigation">
+      <a class="brand" href="index.html">Ein Film über dich</a>
+      <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+    </nav>
+  </header>
 
+  <main>
+    <p class="eyebrow">Transparenz und Vertrauen</p>
+    <h1>Rechtliches &amp; Vereinbarung</h1>
+    <p class="intro">
+      Ein persönlicher Film erzählt eine einzigartige Lebensgeschichte.
+      Damit die Zusammenarbeit für beide Seiten klar und vertrauensvoll
+      bleibt, werden Umfang, Verwendung, Vertraulichkeit und Veröffentlichung
+      vor Beginn des Projekts gemeinsam vereinbart.
+    </p>
+
+    <div class="notice">
+      <strong>Wichtiger Hinweis:</strong>
+      Der nachfolgende Text ist ein Entwurf für eine individuelle Vereinbarung.
+      Er ersetzt keine rechtliche Beratung. Die konkreten Bedingungen,
+      insbesondere zu Datenschutz, Urheberrechten und Veröffentlichung,
+      sollten vor der Unterzeichnung geprüft und gegebenenfalls angepasst werden.
+    </div>
+
+    <article class="agreement">
+      <section>
+        <h2>Vereinbarung über die Erstellung eines persönlichen Films</h2>
+        <p>
+          zwischen dem Auftraggeber bzw. der Auftraggeberin
+          (nachfolgend „Auftraggeber“)
+        </p>
+        <p>
+          Name: <span class="field">&nbsp;</span><br>
+          Anschrift: <span class="field">&nbsp;</span>
+        </p>
+        <p>
+          und Andrej Raduga (nachfolgend „Filmemacher“).
+        </p>
+        <p>
+          Beide Parteien vereinbaren die folgenden Bedingungen für die
+          Planung, Erstellung und vereinbarte Verwendung eines persönlichen Films.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 1. Gegenstand der Vereinbarung</h2>
+        <p>
+          Gegenstand dieser Vereinbarung ist die individuelle Erstellung eines
+          persönlichen Films über das Leben, die Erfahrungen, die Familie,
+          die Werte oder das Vermächtnis des Auftraggebers.
+        </p>
+        <p>
+          Inhalt, Umfang, Format und besondere Wünsche werden im persönlichen
+          Gespräch abgestimmt. Die konkrete Leistung richtet sich nach den
+          zwischen den Parteien vereinbarten Projektbedingungen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 2. Inhalt und Mitwirkung</h2>
+        <p>
+          Der Auftraggeber stellt die für das Projekt vorgesehenen Informationen,
+          Erinnerungen, Bilder, Videos und sonstigen Materialien zur Verfügung,
+          soweit diese benötigt werden und rechtmäßig verwendet werden dürfen.
+        </p>
+        <p>
+          Beide Parteien stimmen Interviewtermine, Inhalte und den Ablauf der
+          Zusammenarbeit miteinander ab. Der Auftraggeber entscheidet selbst,
+          welche persönlichen Themen er ansprechen möchte und welche Informationen
+          vertraulich bleiben sollen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 3. Mögliche Filmversionen</h2>
+        <p>
+          Je nach Wunsch des Auftraggebers können zwei Versionen des Films
+          erstellt werden:
+        </p>
+        <ul>
+          <li>
+            <strong>Öffentliche Version:</strong> eine kürzere Fassung,
+            beispielsweise mit einer Laufzeit von etwa 20 bis 30 Minuten,
+            die für eine Veröffentlichung oder für ein ausgewähltes Publikum
+            vorgesehen sein kann.
+          </li>
+          <li>
+            <strong>Persönliche Familienversion:</strong> eine ausführlichere
+            Fassung, beispielsweise ab 30 Minuten, die für den privaten Gebrauch
+            und die Familie bestimmt sein kann. Sie kann zusätzliche Erinnerungen,
+            persönliche Erfahrungen und Informationen enthalten, die nicht für
+            die Öffentlichkeit vorgesehen sind.
+          </li>
+        </ul>
+        <p>
+          Die genannten Laufzeiten sind Richtwerte. Ob eine oder beide Versionen
+          erstellt werden, welche Inhalte sie enthalten und wie sie verwendet
+          werden dürfen, wird vor Beginn der Produktion gesondert vereinbart.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 4. Vertraulichkeit</h2>
+        <p>
+          Der Filmemacher behandelt persönliche Informationen, Gespräche und
+          Materialien, die ihm im Rahmen des Projekts anvertraut werden,
+          vertraulich. Eine Weitergabe an Dritte erfolgt nicht ohne eine
+          entsprechende rechtliche Grundlage oder die erforderliche Zustimmung
+          des Auftraggebers.
+        </p>
+        <p>
+          Inhalte, die ausschließlich für eine persönliche oder familiäre
+          Filmversion bestimmt sind, werden nicht ohne vorherige ausdrückliche
+          Zustimmung des Auftraggebers veröffentlicht.
+        </p>
+        <p>
+          Die Vertraulichkeit gilt im Rahmen der gesetzlichen Bestimmungen
+          auch nach Abschluss der Zusammenarbeit fort.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 5. Veröffentlichung und öffentliche Nutzung</h2>
+        <p>
+          Die Erstellung eines Films bedeutet nicht automatisch, dass der Film
+          veröffentlicht werden darf. Eine Veröffentlichung auf einer Website,
+          einer Videoplattform, in sozialen Medien oder über andere öffentliche
+          Kanäle bedarf einer gesonderten Freigabe des Auftraggebers.
+        </p>
+        <p>
+          Wenn keine öffentliche Version vereinbart und keine entsprechende
+          Freigabe erteilt wurde, wird der Film nicht allein aufgrund dieser
+          Vereinbarung öffentlich zugänglich gemacht.
+        </p>
+        <p>
+          Der Auftraggeber kann die öffentliche Version und den Umfang ihrer
+          Veröffentlichung vorab mit dem Filmemacher abstimmen. Die Einzelheiten
+          werden in der gesonderten Freigabe zur Veröffentlichung festgehalten.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 6. Rechte an bereitgestellten Materialien</h2>
+        <p>
+          Der Auftraggeber bestätigt, dass er die bereitgestellten Materialien
+          rechtmäßig verwenden darf oder über die erforderlichen Erlaubnisse
+          verfügt, soweit solche erforderlich sind.
+        </p>
+        <p>
+          Bei Fotos, Musik, Filmaufnahmen oder anderen Materialien Dritter können
+          zusätzliche Urheber-, Nutzungs- oder Persönlichkeitsrechte bestehen.
+          Die Parteien klären vor einer vorgesehenen Veröffentlichung, welche
+          Materialien dafür verwendet werden dürfen.
+        </p>
+        <p>
+          Der Auftraggeber informiert den Filmemacher, wenn bestimmte Materialien
+          ausschließlich für den privaten Gebrauch vorgesehen sind.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 7. Gestaltung, Abstimmung und Korrekturen</h2>
+        <p>
+          Der Filmemacher gestaltet den Film auf Grundlage der vereinbarten
+          Inhalte und des besprochenen Konzepts. Die Parteien stimmen ab,
+          wann eine Vorschau bereitgestellt wird und wie Änderungswünsche
+          übermittelt werden.
+        </p>
+        <p>
+          Umfang, Anzahl und mögliche Kosten zusätzlicher Korrekturen werden
+          vor Beginn der Produktion vereinbart. Wesentliche Änderungen des
+          ursprünglichen Auftrags können eine Anpassung des Zeitplans und
+          der Vergütung erforderlich machen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 8. Vergütung und Zahlungsbedingungen</h2>
+        <p>
+          Die vereinbarte Vergütung beträgt:
+          <span class="field">&nbsp;</span> Euro.
+        </p>
+        <p>
+          Zahlungsweise, Fälligkeit, mögliche Teilzahlungen und gegebenenfalls
+          zusätzliche Kosten werden vor Beginn der Arbeit schriftlich festgelegt.
+          Zusatzleistungen, die nicht im ursprünglichen Auftrag enthalten sind,
+          bedürfen einer vorherigen Abstimmung.
+        </p>
+        <p>
+          Die Parteien halten fest, welche Leistungen im vereinbarten Preis
+          enthalten sind und ob weitere Kosten, beispielsweise für Reisen,
+          besondere technische Leistungen oder zusätzliche Fassungen, entstehen.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 9. Zeitplan und Übergabe</h2>
+        <p>
+          Der voraussichtliche Zeitplan wird gemeinsam abgestimmt. Er hängt
+          insbesondere vom Umfang des Films, der rechtzeitigen Bereitstellung
+          von Materialien, den Interviewterminen und den gewünschten Korrekturen ab.
+        </p>
+        <p>
+          Der vereinbarte Übergabetermin lautet:
+          <span class="field">&nbsp;</span>.
+        </p>
+        <p>
+          Wenn sich Verzögerungen abzeichnen, informieren sich die Parteien
+          gegenseitig und vereinbaren nach Möglichkeit einen angepassten Zeitplan.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 10. Datenschutz und persönliche Angaben</h2>
+        <p>
+          Personenbezogene Daten und persönliche Materialien werden im Rahmen
+          des Projekts nur für die vereinbarten Zwecke und im Einklang mit den
+          jeweils geltenden gesetzlichen Bestimmungen verarbeitet.
+        </p>
+        <p>
+          Soweit für die Verarbeitung oder Veröffentlichung eine besondere
+          Einwilligung erforderlich ist, wird diese gesondert eingeholt.
+          Der Auftraggeber sollte keine Materialien bereitstellen, deren
+          Verwendung er nicht wünscht oder nicht rechtmäßig gestatten kann.
+        </p>
+        <p>
+          Die Parteien klären bei Bedarf gesondert, wie Projektdateien gespeichert,
+          gesichert, übermittelt und nach Abschluss des Projekts aufbewahrt
+          oder gelöscht werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 11. Nutzung des fertigen Films</h2>
+        <p>
+          Die erlaubte Nutzung des fertigen Films richtet sich nach der
+          vereinbarten Filmversion und den ausdrücklich festgelegten Nutzungsrechten.
+        </p>
+        <p>
+          Die private Nutzung durch den Auftraggeber und die Familie ist von
+          einer öffentlichen Veröffentlichung zu unterscheiden. Eine öffentliche
+          Nutzung, Weitergabe an Medien oder anderweitige kommerzielle Nutzung
+          wird gesondert vereinbart.
+        </p>
+        <p>
+          Die Rechte Dritter an verwendeten Materialien bleiben unberührt.
+          Einzelheiten zu den Nutzungsrechten am fertigen Film sind von den
+          Parteien vor Unterzeichnung eindeutig festzuhalten.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 12. Beendigung der Zusammenarbeit</h2>
+        <p>
+          Wenn eine Partei die Zusammenarbeit beenden möchte, informiert sie
+          die andere Partei darüber. Die Parteien stimmen ab, welche bereits
+          erbrachten Leistungen abzurechnen sind und wie mit bereits
+          bereitgestellten Materialien und Projektdateien umzugehen ist.
+        </p>
+        <p>
+          Bereits vereinbarte Zahlungen, mögliche Erstattungen und die Nutzung
+          bis dahin erstellter Arbeitsergebnisse richten sich nach den konkret
+          vereinbarten Bedingungen und den anwendbaren gesetzlichen Vorschriften.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 13. Änderungen und ergänzende Vereinbarungen</h2>
+        <p>
+          Änderungen des Auftrags, zusätzliche Leistungen und besondere Wünsche
+          sollen von beiden Parteien nachvollziehbar dokumentiert werden.
+        </p>
+        <p>
+          Ergänzende Vereinbarungen, insbesondere zu Umfang, Vergütung,
+          Vertraulichkeit, Nutzungsrechten und Veröffentlichung, werden
+          schriftlich festgehalten.
+        </p>
+      </section>
+
+      <section>
+        <h2>§ 14. Schlussbestimmungen</h2>
+        <p>
+          Die Parteien bestätigen, dass sie die Vereinbarung gelesen und
+          Gelegenheit hatten, Fragen zu stellen und Änderungen vorzuschlagen.
+        </p>
+        <p>
+          Sollte eine einzelne Bestimmung unwirksam sein oder werden, bleiben
+          die übrigen Bestimmungen im Rahmen der gesetzlichen Vorschriften
+          unberührt. Die Parteien werden gegebenenfalls eine rechtlich zulässige
+          Regelung abstimmen, die dem beabsichtigten Zweck möglichst nahekommt.
+        </p>
+        <p>
+          Maßgeblich sind die anwendbaren gesetzlichen Bestimmungen.
+          Zwingende gesetzliche Rechte bleiben unberührt.
+        </p>
+        <p>
+          Ort: <span class="field">&nbsp;</span><br>
+          Datum: <span class="field">&nbsp;</span>
+        </p>
+        <p>
+          Auftraggeber: <span class="field">&nbsp;</span><br>
+          Filmemacher: <span class="field">&nbsp;</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>Gesonderte Freigabe zur Veröffentlichung</h2>
+        <p>
+          Die Veröffentlichung des persönlichen Films ist freiwillig und
+          wird gesondert von der Beauftragung der Filmerstellung entschieden.
+          Die folgenden Auswahlmöglichkeiten sollen den Umfang der Zustimmung
+          eindeutig dokumentieren.
+        </p>
+        <p><strong>Bitte Zutreffendes auswählen:</strong></p>
+        <ul>
+          <li>
+            ☐ Ich stimme der Veröffentlichung der zuvor abgestimmten öffentlichen
+            Filmversion auf der vereinbarten Website oder Videoplattform zu.
+          </li>
+          <li>
+            ☐ Ich stimme der Veröffentlichung ausgewählter Ausschnitte zu,
+            sofern diese vorab mit mir abgestimmt wurden.
+          </li>
+          <li>
+            ☐ Ich stimme keiner öffentlichen Veröffentlichung meines Films zu.
+          </li>
+        </ul>
+        <p>
+          Vereinbarte Veröffentlichungsorte oder Einschränkungen:
+        </p>
+        <p>____________________________________________________________</p>
+        <p>____________________________________________________________</p>
+        <p>
+          Die persönliche Familienversion ist nicht zur öffentlichen
+          Veröffentlichung bestimmt, sofern nicht ausdrücklich etwas anderes
+          vereinbart und rechtlich zulässig ist.
+        </p>
+        <p>
+          Die Freigabe bezieht sich ausschließlich auf den oben festgelegten
+          Umfang. Weitere Verwendungen, insbesondere in einem anderen Kontext
+          oder über andere Kanäle, sind damit nicht automatisch genehmigt.
+        </p>
+        <p>
+          Ort: <span class="field">&nbsp;</span><br>
+          Datum: <span class="field">&nbsp;</span>
+        </p>
+        <p>
+          Unterschrift Auftraggeber: <span class="field">&nbsp;</span>
+        </p>
+      </section>
+    </article>
+
+    <section class="downloads">
+      <h2>Vereinbarung als Word-Dokument</h2>
+      <p>
+        Die Vereinbarung kann auch als Word-Datei heruntergeladen werden.
+        Die Dokumente müssen vor der Verwendung individuell geprüft und
+        gegebenenfalls ergänzt werden.
+      </p>
+      <p>
+        <a class="download-link" href="Vereinbarung_Persoenlicher_Film_DE.docx" download>
+          Vereinbarung auf Deutsch (.docx)
+        </a>
+        <a class="download-link" href="Соглашение_Персональный_фильм_RU.docx" download>
+          Соглашение на русском (.docx)
+        </a>
+      </p>
+      <p class="small-note">
+        Hinweis: Die Download-Links funktionieren erst, wenn beide Word-Dateien
+        unter den angegebenen Namen im Hauptverzeichnis dieses GitHub-Repositories
+        abgelegt wurden.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Andrej Raduga · Ein Film über dich</p>
+    <p>Persönliche Geschichten. Erinnerungen. Vermächtnis.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

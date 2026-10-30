@@ -791,19 +791,21 @@
   .hero-text {
     width: 100%;
   }
+  .hero-description {
+    max-width: 520px;
+  }
   .hero-text h1 {
     white-space: normal;
   }
-    .hero-text h1 > br:first-of-type {
+  .hero-text h1 > br:first-of-type {
     display: none;
   }
   .hero-text h1 > span {
-  display: block;
-  max-width: 100%;
-}
-.hero-text h1 > span {
-  white-space: normal;
-}
+    display: block;
+  }
+  .hero-text h1 > span br {
+    display: block;
+  }
 }
     @media (prefers-reduced-motion: reduce) {
       html {

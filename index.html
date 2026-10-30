@@ -784,7 +784,23 @@
         row-gap: 28px;
       }
     }
-    
+    @media (min-width: 651px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-content {
+    width: min(900px, calc(100% - 40px));
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .hero-text h1 {
+    white-space: normal;
+  }
+  .hero-text h1 > br {
+    display: none;
+  }
+  .hero-text h1 > span {
+    display: block;
+  }
+}
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;

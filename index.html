@@ -712,7 +712,30 @@
         white-space: normal;
       }
     }
+        @media (max-width: 650px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
 
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+}
         @media (max-width: 650px) {
       .hero {
         min-height: auto;

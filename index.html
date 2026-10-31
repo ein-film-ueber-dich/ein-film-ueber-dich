@@ -807,39 +807,7 @@
     display: block;
   }
 }
-    /* iPad — горизонтальная ориентация */
-@media (min-width: 651px) and (max-width: 1400px) and (orientation: landscape) {
-
-  /* Последняя золотистая фраза целиком на новой строке */
-  .hero-gold-lines i:last-child {
-    display: block;
-    white-space: nowrap;
-  }
-
-  /* Четыре карточки: ниже и шире */
-  .hero-features {
-    position: absolute !important;
-    left: 4% !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: 60px !important;
-    width: 92% !important;
-    transform: none !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 0;
-  }
-
-  .hero-feature {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .hero-feature p {
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-  }
-}
+    
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;

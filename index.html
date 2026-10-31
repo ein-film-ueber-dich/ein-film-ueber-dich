@@ -812,6 +812,30 @@
     white-space: nowrap;
   }
 }
+    @media (min-width: 651px) and (max-width: 1024px) and (orientation: landscape) {
+  .hero {
+    display: block;
+    min-height: 100svh;
+    padding-bottom: 0;
+  }
+
+  .hero-features {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 20px !important;
+    left: 4% !important;
+    width: 92% !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 12px;
+    row-gap: 0;
+  }
+
+  .hero-feature {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;

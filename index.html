@@ -784,14 +784,12 @@
         row-gap: 28px;
       }
     }
-    @media (min-width: 651px) and (max-width: 1024px) and (orientation: portrait) {
-  .hero-content {
-    width: min(900px, calc(100% - 40px));
-      .hero-gold-lines i {
+    @media (min-width: 651px) and (max-width: 1300px) and (orientation: landscape) {
+  .hero-gold-lines i:last-child {
     display: block;
-    font-style: normal;
+    white-space: nowrap;
   }
-  }
+}
 
   .hero-text {
     width: 100%;

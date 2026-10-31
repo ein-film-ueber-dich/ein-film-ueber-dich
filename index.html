@@ -1142,13 +1142,7 @@
 
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
 
-window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-});
     menuToggle.addEventListener("click", () => {
       const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
 
